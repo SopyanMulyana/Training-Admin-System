@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using JSON Format</h2>
+
+<p id="demo"></p>
+
+<script>
+
+var myJSON = '{ "name":"Sopyan", "age":22, "city":"Purwakarta" }';
+var myObj = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = 'Nama = ' + myObj.name+ '</br>Usia = ' + myObj.age+'</br>Kota = '+myObj.city;
+</script>
+
+</body>
+</html>
