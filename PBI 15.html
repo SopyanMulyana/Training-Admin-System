@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Handling From UI</title>
+</head>
+<body>
+
+<button id="target1" class="btn btn-info">Click here for .click()</button>
+<div id="msg1" class="output">
+
+</div>
+
+<button id="target2" class="btn btn-info">Click here for .on()</button>
+<div id="msg2" class="output">
+
+</div>
+
+<button id="target3" class="btn btn-info">Click here for .delegate()!</button>
+<div id="msg3" class="output">
+
+</div>
+
+<button id="target4" class="btn btn-info">Click here for .bind()</button>
+<div id="msg4" class="output">
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	var i = 0;
+$('#target1').click(function() {
+    $("#msg1").text("click (" + i++ + ")");
+});
+
+var j = 0;
+$('#target2').on('click', function() {
+    $("#msg2").text("on (" + j++ + ")");
+});
+
+var k = 0;
+$('#target3').delegate('', 'click', function() {
+    $("#msg3").text("delegate (" + k++ + ")");
+});
+
+var l = 0;
+$('#target4').bind('click', function() {
+    $("#msg4").text("bind (" + l++ + ")");
+});
+
+</script>
+</body>
+</html>
+
