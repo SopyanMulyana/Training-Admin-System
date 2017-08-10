@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="http://underscorejs.org/underscore.js"></script>
+    </head>
+    <body>
+        <h3>Isi Array</h3>
+        <p id="tes"></p>
+        <h3>First</h3>
+        <p id="tes2"></p>
+        <h3>Initial</h3>
+        <p id="tes3"></p>
+        <h3>Last</h3>
+        <p id="tes4"></p>
+        <h3>Rest</h3>
+        <p id="tes5"></p>
+<script>
+    var arra=[3,1,5,7]; 
+    document.getElementById("tes").innerHTML = arra;
+    document.getElementById("tes2").innerHTML = _.first(arra);
+    document.getElementById("tes3").innerHTML = _.initial(arra);
+    document.getElementById("tes4").innerHTML = _.last(arra);
+    document.getElementById("tes5").innerHTML = _.rest(arra);
+</script>
+
+    </body>
+</html>
