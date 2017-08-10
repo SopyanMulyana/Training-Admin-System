@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <p id="coba"></p>
+    </body>
+​<script>
+    
+    function doSomething(callback) {
+    // ...
+    var tex="";
+    // Call the callback
+    callback('Aku', 'Suka', 'Kamu');
+    }
+
+    function foo(a, b, c) {
+    // I'm the callback
+    tex = a + " " + b + " " + c;
+    }
+
+    doSomething(foo);
+    document.getElementById("coba").innerHTML = tex;
+</script>
+</html>
