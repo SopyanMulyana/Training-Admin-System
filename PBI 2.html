@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head>
+    <style>
+
+
+</style>
+</head>
+<body>
+
+<h1 id="id02">Kosong</h1>
+<script>
+var element = document.getElementById("id02");
+element.innerHTML = "Angka dalam bahasa sepanyol";
+element.style.color = "red";
+element.style.textAlign = "center";
+</script>
+
+<table id="contohTable">
+    <thead >
+        <tr>
+            <th colspan="5">List Angka</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="perc">
+            
+        </tr>
+    </tbody>
+</table>
+</body>
+<script>
+    var angka = ["Uno", "Dos", "Tres", "Quatro", "Sinko"];
+    var text="";
+    for (i = 0; i < 5; i++) {
+    text += "<td>"+angka[i]+"</td>";
+    }
+    var element = document.getElementById("perc");
+element.innerHTML = text;
+</script>
+<script>
+    var element2 = document.getElementById("contohTable");
+    element2.style.backgroundColor = "#f1f1c1";
+</script>
+</html>
