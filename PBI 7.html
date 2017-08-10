@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI Filtering With JS</title>
+</head>
+<body>
+<h1>Viewing <span class="js-current-category">All</span></h1>
+<select id="category-filter">
+    <option value="">Filter by Category</option>
+    <option value="all">Show All</option>
+    <option value="cat1">Category 1</option>
+    <option value="cat2">Category 2</option>
+</select>
+
+<div data-category="cat1" class="js-category-filterable">
+  Two of these in category 1
+</div>
+<div data-category="cat1" class="js-category-filterable">
+  Two of these in category 1
+</div>
+<div data-category="cat2" class="js-category-filterable">
+  One of these in category 2
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$('#category-filter').change(function() {
+  var $select = $(this);
+  if ($select.val() == 'all') {
+    $('.js-category-filterable').show();
+    $('.js-current-category').text('All');
+  } else {
+    $('.js-category-filterable').each(function() {
+      if ($(this).data('category') == $select.val()) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+    $('.js-current-category').text( $select.find('option:selected').text() );
+  }
+  $select.val('');
+});
+</script>
+</body>
+</html>
