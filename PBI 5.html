@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Show or Hide HTML Element with Animation</title>
+</head>
+<body>
+	<button id="hide">Hide</button>
+	<button id="show">Show</button>
+
+	<p>This is a paragraph with random content.</p>
+	<p>Please click "Hide" button to hide this paragraph.</p>
+	<p>Please click "Show" button to show this paragraph.</p>
+	
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function(){
+	$("#show").attr("disabled", true);
+    $("#hide").click(function(){
+        $("p").hide(1000);
+        $("#hide").attr("disabled", true);
+        $("#show").attr("disabled", false);
+    });
+    
+    $("#show").click(function(){
+        $("p").show(1000);
+        $("#show").attr("disabled", true);
+        $("#hide").attr("disabled", false);
+    });
+});
+</script>
+</body>
+</html>
