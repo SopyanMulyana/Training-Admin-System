@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>	
+</style>
+	<title>Implement Form Validation</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>
+		<input type="text" id="name">
+	</td>
+  </tr>
+  <tr>
+    <td>Level</td>
+    <td>
+		<select id="level">
+			<option value="">Select</option>
+			<option value="1">1</option>
+	  		<option value="2">2</option>
+	  		<option value="3">3</option>
+	  		<option value="4">4</option>
+			<option value="5">5</option>
+	  		<option value="6">6</option>
+	  		<option value="7">7</option>
+	  		<option value="8">8</option>
+			<option value="9">9</option>
+	  		<option value="10">10</option>
+		</select>
+		
+	</td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td><textarea rows="4" cols="50" id="address" form="usrform"></textarea></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="submit" onclick="validationForm()" value="Submit"></td>
+  </tr>
+</table>
+
+<script>
+	function validationForm(){
+	
+		if(!document.getElementById("name").value){
+			alert("Name field is required!");
+		}else if(document.getElementById( "level" ).options[ document.getElementById( "level" ).selectedIndex ].value==""){
+			alert("Age field is required!");
+		}else if(!document.getElementById("address").value){
+			alert("Address field is required!");
+		}else{
+			alert("Success! Data has been saved");
+			document.getElementById("name").value='';
+			document.getElementById("level").selectedIndex=0;
+			document.getElementById("address").value='';
+		}
+	}
+</script>
+</body>
+</html>
