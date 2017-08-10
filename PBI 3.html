@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML and CSS Manipulation through jQuery</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p>Hello, I'm </p>
+ 
+<script>
+$( "p" ).append( "<strong id=\"yellow\">yellow</strong>" );
+$( "p" ).css({'font': 'yellow','font-size': '20px'});
+$( '#yellow' ).css({'font-style': 'italic','background': 'yellow'});
+</script>
+ 
+</body>
+</html>
