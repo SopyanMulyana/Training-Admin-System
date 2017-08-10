@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Implements Date Time Parser with String Format</title>
+	
+<style>
+	#local-time{
+		display: flex;
+	}
+	#parse-time{
+		display: flex;
+	}
+</style>
+</head>
+<body>
+	<div id="local-time">
+			<b>Date and Time</b>:&nbsp;<div id="ltime"></div>
+	</div>
+	<br>
+
+	<b>Please input date and time <i>(ex: 2017-08-20 12:12:14)</i>:&nbsp;</b><input id="datetime-data"></input><input type="submit" onclick="parsedatetime()" value="Submit"><br>
+	<div id="parse-time"><b>Result:</b>&nbsp;<div id="result"></div></div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+<script>
+	function parsedatetime(){
+		
+		$( "#result" ).text( moment(document.getElementById("datetime-data").value).format('MM/DD/YYYY h:mm a') );
+
+	}
+	
+	$(document).ready(function(){
+		$(function(){
+		  setInterval(function(){
+		         
+		    var localTime = moment().format('YYYY-MM-DD HH:mm:ss');
+			 $('#ltime').text(localTime);
+	        
+		  },1000);
+		});
+	});
+</script>
+</body>
+</html>
