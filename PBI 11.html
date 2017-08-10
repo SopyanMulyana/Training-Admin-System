@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disable Button While Processing a Request</title>
+</head>
+<body>
+<input type="submit" onclick="submit()" name="process" value="Submit"><br>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	function submit(){
+		$('input[name=process]').val('Please wait while processing');
+		$("input[name=process]").attr("disabled", true);
+		setTimeout(function(){
+			$('input[name=process]').val('Submit');
+			$("input[name=process]").attr("disabled", false);
+		}, 3000);
+	}
+</script>
+</body>
+</html>
