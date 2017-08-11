@@ -1,0 +1,55 @@
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+    height: auto;
+}
+
+.header {
+    height: 100px;
+    border-bottom: 1px solid gray;
+} 
+
+.footer {
+    height: 30px;
+	border-top: 1px solid gray;
+}
+
+.left-menu {
+	max-width: 160px;
+	float: left;
+    margin: 0;
+    padding: 1em;
+    word-wrap: break-word;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 1190px;
+    float: right;
+	margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
