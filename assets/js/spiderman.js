@@ -1,2 +1,0 @@
-document.getElementById("header").innerHTML='<a href="index.html"><img src="assets/img/logo.png" class="header-logo"></a>';
-document.getElementById("footer").innerHTML='<div class="innertube"><p style="color: #F2F3F3;">Copyright &copy; 2017</p></div>';
