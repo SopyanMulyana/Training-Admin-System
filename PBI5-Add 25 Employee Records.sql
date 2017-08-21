@@ -1,4 +1,5 @@
 DELETE FROM Employee;
+
 SET IDENTITY_INSERT Employee ON;
 INSERT INTO Employee (EmployeeID,EmpployeeName,email,Job,Grade,Account,ActiveStatus) VALUES (1,'Sopyan','sopyan@mitrais.com','SE.SE-MWA','PG','mitrais\sopyan','Yes');
 INSERT INTO Employee (EmployeeID,EmpployeeName,email,Job,Grade,Account,ActiveStatus) VALUES (2,'Wisesa','wisesa@mitrais.com','MJF.MJF-GS','PG','mitrais\wisesa','Yes');
