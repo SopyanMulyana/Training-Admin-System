@@ -4,12 +4,12 @@
 <script>
 function clickCounter() {
     if(typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount) {
-            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
         } else {
-            sessionStorage.clickcount = 1;
+            localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "Click " + sessionStorage.clickcount + " time(s).";
+        document.getElementById("result").innerHTML = "Click " + localStorage.clickcount + " time(s).";
     } else {
         document.getElementById("result").innerHTML = "Anda kurang beruntung.";
     }
