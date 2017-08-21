@@ -1,4 +1,5 @@
-delete from [role];
+DELETE FROM [Role];
+
 SET IDENTITY_INSERT [Role] ON;
 INSERT INTO [Role](RoleID,RoleName) VALUES (1,'Administrator');
 INSERT INTO [Role](RoleID,RoleName) VALUES (2,'User');
