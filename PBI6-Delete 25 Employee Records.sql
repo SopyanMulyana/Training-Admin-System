@@ -1,1 +1,1 @@
-DELETE FROM employee
+DELETE FROM Employee;
