@@ -29,25 +29,24 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 	var i = 0;
-$('#target1').click(function() {
-    $("#msg1").text("click (" + i++ + ")");
-});
+	$('#target1').click(function() {
+	    $("#msg1").text("click (" + i++ + ")");
+	});
 
-var j = 0;
-$('#target2').on('click', function() {
-    $("#msg2").text("on (" + j++ + ")");
-});
+	var j = 0;
+	$('#target2').on('click', function() {
+	    $("#msg2").text("on (" + j++ + ")");
+	});
 
-var k = 0;
-$('#target3').delegate('', 'click', function() {
-    $("#msg3").text("delegate (" + k++ + ")");
-});
+	var k = 0;
+	$('#target3').delegate('', 'click', function() {
+	    $("#msg3").text("delegate (" + k++ + ")");
+	});
 
-var l = 0;
-$('#target4').bind('click', function() {
-    $("#msg4").text("bind (" + l++ + ")");
-});
-
+	var l = 0;
+	$('#target4').bind('click', function() {
+	    $("#msg4").text("bind (" + l++ + ")");
+	});
 </script>
 </body>
 </html>
